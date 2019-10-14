@@ -1,11 +1,8 @@
 // Imports: Dependencies
 import { call, takeEvery } from 'redux-saga/effects';
 
-// Imports: Firebase Collection References
-import { counterRef } from '../../firebase/firebase';
+// Imports: Firebase Collection + Atomic Incrementers
 import reduxSagaFirebase from '../../firebase/firebase';
-
-// Imports: Atomic Increment/Decrement
 import { atomicIncrement, atomicDecrement } from '../../firebase/firebase';
 
 // Redux Saga: Increase Counter
