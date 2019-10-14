@@ -19,8 +19,9 @@ const firebaseApp = firebase.initializeApp({
 // Redux Saga Firebase: Initialize
 const reduxSagaFirebase = new ReduxSagaFirebase(firebaseApp);
 
-// Firebase: Counter Reference
-export const counterRef = firebase.firestore().collection('counter');
+// Increment/Decrement
+export const atomicIncrement = firebase.firestore.FieldValue.increment(1);
+export const atomicDecrement = firebase.firestore.FieldValue.increment(-1);
 
 // Exports
 export default reduxSagaFirebase;
