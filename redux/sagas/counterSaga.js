@@ -12,7 +12,7 @@ function* increaseCounter() {
   catch (error) {
     console.log(error);
   }
-}
+};
 
 // Redux Saga: Decrease Counter
 function* decreaseCounter() {
@@ -25,7 +25,7 @@ function* decreaseCounter() {
   catch (error) {
     console.log(error);
   }
-}
+};
 
 // Generator: Watch Increase Counter
 export function* watchIncreaseCounter() {
