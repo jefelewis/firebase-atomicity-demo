@@ -1,5 +1,5 @@
 // Imports: Dependencies
-import { delay, takeEvery, takeLatest, put } from 'redux-saga/effects';
+import { takeEvery } from 'redux-saga/effects';
 
 // Redux Saga: Increase Counter
 function* increaseCounter() {
@@ -29,18 +29,12 @@ function* decreaseCounter() {
 
 // Generator: Watch Increase Counter
 export function* watchIncreaseCounter() {
-  // // Take Every Action
-  // yield takeEvery('INCREASE_COUNTER', increaseCounter);
-
-  // Take Last Action
-  yield takeLatest('INCREASE_COUNTER', increaseCounter);
+  // Take Every Action
+  yield takeEvery('INCREASE_COUNTER', increaseCounter);
 };
 
 // Generator: Watch Decrease Counter
 export function* watchDecreaseCounter() {
-  // // Take Every Action
-  // yield takeEvery('DECREASE_COUNTER', decreaseCounter);
-
-  // Take Last Action
-  yield takeLatest('DECREASE_COUNTER', decreaseCounter);
+  // Take Every Action
+  yield takeEvery('DECREASE_COUNTER', decreaseCounter);
 };
