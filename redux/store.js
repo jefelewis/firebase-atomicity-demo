@@ -4,7 +4,7 @@ import { createLogger } from 'redux-logger';
 import createSagaMiddleware from 'redux-saga';
 
 // Imports: Redux Root Reducer
-import rootReducer from '../reducers/index';
+import rootReducer from './reducers/index';
 
 // Imports: Redux Root Saga
 import { rootSaga } from './sagas/index';
