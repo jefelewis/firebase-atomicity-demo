@@ -1,8 +1,8 @@
 // Imports: Dependencies
 import { delay, takeEvery, takeLatest, put } from 'redux-saga/effects';
 
-// Increase Counter
-function* increaseCounterAsync() {
+// Redux Saga: Increase Counter
+function* increaseCounter() {
   try {
     // Update Data: Increment Counter By 1
     yield call(reduxSagaFirebase.firestore.updateDocument, `counter/counter`, {
@@ -14,7 +14,7 @@ function* increaseCounterAsync() {
   }
 }
 
-// Decrease Counter Async
+// Redux Saga: Decrease Counter
 function* decreaseCounter() {
   try {
     // Update Data: Decrement Counter By 1
@@ -30,10 +30,10 @@ function* decreaseCounter() {
 // Generator: Watch Increase Counter
 export function* watchIncreaseCounter() {
   // // Take Every Action
-  // yield takeEvery('INCREASE_COUNTER', increaseCounterAsync);
+  // yield takeEvery('INCREASE_COUNTER', increaseCounter);
 
   // Take Last Action
-  yield takeLatest('INCREASE_COUNTER', increaseCounterAsync);
+  yield takeLatest('INCREASE_COUNTER', increaseCounter);
 };
 
 // Generator: Watch Decrease Counter
