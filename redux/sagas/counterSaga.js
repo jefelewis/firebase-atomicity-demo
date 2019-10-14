@@ -1,11 +1,15 @@
 // Imports: Dependencies
-import { takeEvery } from 'redux-saga/effects';
+import { call, takeEvery } from 'redux-saga/effects';
+
+// Imports: Firebase Collection References
+import { counterRef } from '../../firebase/firebase';
+import reduxSagaFirebase from '../../firebase/firebase';
 
 // Redux Saga: Increase Counter
 function* increaseCounter() {
   try {
     // Update Data: Increment Counter By 1
-    yield call(reduxSagaFirebase.firestore.updateDocument, `counter/counter`, {
+    yield call(reduxSagaFirebase.firestore.updateDocument, 'counter/counter', {
       counter: FieldValue.increment(1),
     });
   }
@@ -18,7 +22,7 @@ function* increaseCounter() {
 function* decreaseCounter() {
   try {
     // Update Data: Decrement Counter By 1
-    yield call(reduxSagaFirebase.firestore.updateDocument, `counter/counter`, {
+    yield call(reduxSagaFirebase.firestore.updateDocument, 'counter/counter', {
       counter: FieldValue.increment(-1),
     });
   }
