@@ -79,7 +79,7 @@ npm install
 npm start
 ```
 
-**5. Start iOS Simulator:**
+**6. Start iOS Simulator:**
 ```
 npm run simulator
 ```
