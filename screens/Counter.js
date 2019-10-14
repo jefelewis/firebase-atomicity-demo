@@ -3,6 +3,9 @@ import React, { Component } from 'react';
 import { Dimensions, SafeAreaView, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import { connect } from 'react-redux';
 
+// Imports: Redux Actions
+import { increaseCounter, decreaseCounter } from '../redux/actions/counterActions';
+
 // Screen Dimensions
 const { height, width } = Dimensions.get('window');
 
@@ -81,15 +84,9 @@ const mapDispatchToProps = (dispatch) => {
   // Action
     return {
       // Increase Counter
-      reduxIncreaseCounter: () => dispatch({
-        type: 'INCREASE_COUNTER',
-        value: 1,
-      }),
+      reduxIncreaseCounter: () => dispatch(increaseCounter()),
       // Decrease Counter
-      reduxDecreaseCounter: () => dispatch({
-        type: 'DECREASE_COUNTER',
-        value: 1,
-      }),
+      reduxDecreaseCounter: () => dispatch(decreaseCounter()),
    };
 };
 
