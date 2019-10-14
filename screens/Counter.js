@@ -49,12 +49,6 @@ const styles = StyleSheet.create({
     fontWeight: '700',
     color: '#000',
   },
-  counterText: {
-    fontFamily: 'System',
-    fontSize: 36,
-    fontWeight: '400',
-    color: '#000',
-  },
   buttonText: {
     fontFamily: 'System',
     fontSize: 50,
@@ -64,14 +58,6 @@ const styles = StyleSheet.create({
     marginRight: 40,
   },
 });
-
-// // Map State To Props (Redux Store Passes State To Component)
-// const mapStateToProps = (state) => {
-//   // Redux Store --> Component
-//   return {
-//     counter: state.counterReducer.counter,
-//   };
-// };
 
 // Map Dispatch To Props (Dispatch Actions To Reducers. Reducers Then Modify The Data And Assign It To Your Props)
 const mapDispatchToProps = (dispatch) => {
