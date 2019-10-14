@@ -21,7 +21,7 @@ class Counter extends React.Component {
             <Text style={styles.buttonText}>+</Text>
           </TouchableOpacity>
 
-          <Text style={styles.counterText}>{this.props.counter}</Text>
+          {/* <Text style={styles.counterText}>{this.props.counter}</Text> */}
 
           <TouchableOpacity onPress={this.props.reduxDecreaseCounter}>
             <Text style={styles.buttonText}>-</Text>
@@ -67,17 +67,13 @@ const styles = StyleSheet.create({
   },
 });
 
-// Map State To Props (Redux Store Passes State To Component)
-const mapStateToProps = (state) => {
-  console.log('State:');
-  console.log(state);
-
-  // Redux Store --> Component
-  return {
-    // counter: state.counterReducer.counter,
-    counter: state.counter.counter,
-  };
-};
+// // Map State To Props (Redux Store Passes State To Component)
+// const mapStateToProps = (state) => {
+//   // Redux Store --> Component
+//   return {
+//     counter: state.counterReducer.counter,
+//   };
+// };
 
 // Map Dispatch To Props (Dispatch Actions To Reducers. Reducers Then Modify The Data And Assign It To Your Props)
 const mapDispatchToProps = (dispatch) => {
@@ -91,4 +87,4 @@ const mapDispatchToProps = (dispatch) => {
 };
 
 // Exports
-export default connect(mapStateToProps, mapDispatchToProps)(Counter);
+export default connect(null, mapDispatchToProps)(Counter);
