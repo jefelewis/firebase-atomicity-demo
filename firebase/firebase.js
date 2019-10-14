@@ -20,7 +20,7 @@ const firebaseApp = firebase.initializeApp({
 const reduxSagaFirebase = new ReduxSagaFirebase(firebaseApp);
 
 // Firebase: Counter Reference
-export const counterRef = firebase.firestore().collection('counter/counter');
+export const counterRef = firebase.firestore().collection('counter');
 
 // Exports
 export default reduxSagaFirebase;
