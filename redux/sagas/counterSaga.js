@@ -5,12 +5,15 @@ import { call, takeEvery } from 'redux-saga/effects';
 import { counterRef } from '../../firebase/firebase';
 import reduxSagaFirebase from '../../firebase/firebase';
 
+// Imports: Atomic Increment/Decrement
+import { atomicIncrement, atomicDecrement } from '../../firebase/firebase';
+
 // Redux Saga: Increase Counter
 function* increaseCounter() {
   try {
     // Update Data: Increment Counter By 1
     yield call(reduxSagaFirebase.firestore.updateDocument, 'counter/counter', {
-      counter: FieldValue.increment(1),
+      counter: atomicIncrement,
     });
   }
   catch (error) {
@@ -23,7 +26,7 @@ function* decreaseCounter() {
   try {
     // Update Data: Decrement Counter By 1
     yield call(reduxSagaFirebase.firestore.updateDocument, 'counter/counter', {
-      counter: FieldValue.increment(-1),
+      counter: atomicDecrement,
     });
   }
   catch (error) {
