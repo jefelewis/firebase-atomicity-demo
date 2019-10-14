@@ -6,7 +6,7 @@ import { Provider } from 'react-redux';
 import Counter from './screens/Counter';
 
 // Imports: Redux Store
-import { store } from './store/store';
+import { store } from './redux/store';
 
 // React Native App
 export default function App() {
