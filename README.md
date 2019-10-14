@@ -8,8 +8,8 @@
 ## Built With
 * [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript) - Programming Language
 * [React Native](https://facebook.github.io/react-native/) - Mobile (iOS/Android) Framework
-* [Redux](https://www.npmjs.com/package/redux) - Global State
-* [Redux Saga](https://github.com/redux-saga/redux-saga) - Asynchronous Redux
+* [Redux](https://redux.js.org) - Global State
+* [Redux Saga](https://redux-saga.js.org) - Asynchronous Redux
 * [Firebase Cloud Firestore](https://firebase.google.com/docs/firestore) - Cloud Firestore (Database)
 
 ## Pending Items
