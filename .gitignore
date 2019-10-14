@@ -2,6 +2,12 @@
 #
 .DS_Store
 
+# Config
+config
+config/*
+config/config
+config/serviceAccount
+
 # Xcode
 #
 build/
