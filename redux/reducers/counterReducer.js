@@ -1,11 +1,7 @@
 // Initial state
 const initialState = {
-    // // State
-    // document: null,
-    // Loading: Error
-    loading: false,
-    firebaseError: null,
-  };
+  loading: false,
+};
   
 // Document Reducer
 export default function documentReducer (state = initialState, action) {

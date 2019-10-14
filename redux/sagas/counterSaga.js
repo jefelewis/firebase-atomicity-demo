@@ -1,7 +1,7 @@
 // Imports: Dependencies
 import { call, takeEvery } from 'redux-saga/effects';
 
-// Imports: Firebase Collection + Atomic Incrementers
+// Imports: Firebase + Atomic Incrementers
 import reduxSagaFirebase from '../../firebase/firebase';
 import { atomicIncrement, atomicDecrement } from '../../firebase/firebase';
 
